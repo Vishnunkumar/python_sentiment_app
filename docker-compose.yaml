@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend_app
+    volumes:
+      - ./backend_app/:/app/
+    ports:
+      - 8080:8080
+
+  frontend:
+    build: ./frontend_app
+    volumes:
+      - ./frontend_app/:/app/
+    ports:
+      - 8001:8501
